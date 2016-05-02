@@ -14,11 +14,12 @@
       </div>
     </div>
   <% end %>
+  <%= render 'common/spinner' %>
   <% if @stock %>
     <div id="stock-lookup-results" class="well results-block">
-      <strong>Symbol:</strong><%= @stock.ticker %>
-      <strong>Name:</strong><%= @stock.name %>
-      <strong>Last price:</strong><%= @stock.last_price %>
+      <strong>Symbol: </strong><%= @stock.ticker %>
+      <strong>Name: </strong><%= @stock.name %>
+      <strong>Last price: </strong><%= @stock.last_price %> (Opening)
     </div>
   <% end %>
   <div id="stock-lookup-errors">
