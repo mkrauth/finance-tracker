@@ -19,7 +19,8 @@
     <div id="stock-lookup-results" class="well results-block">
       <strong>Symbol: </strong><%= @stock.ticker %>
       <strong>Name: </strong><%= @stock.name %>
-      <strong>Last price: </strong><%= @stock.last_price %> (Opening)
+      <strong>Last price: </strong><%= @stock.price %>
+      <%= link_to "Add to my Stocks", user_stocks_path(user: current_user, stock_ticker: @stock.ticker, stock_id: @stock.id ? stock_id : ''), class: 'btn btn-xs btn-success', method: :post %>
     </div>
   <% end %>
   <div id="stock-lookup-errors">
