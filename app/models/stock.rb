@@ -17,10 +17,10 @@ class Stock < ActiveRecord::Base
   end
 
   def price
-    closing_price = StockQuote::Stock.quote(ticker).close
+    closing_price = StockQuote::Stock.quote(ticker_symbol).close
     return "#{closing_price} (Closing)" if closing_price
 
-    opening_price = StockQuote::Stock.quote(ticker).open
+    opening_price = StockQuote::Stock.quote(ticker_symbol).open
     return "#{opening_price} (Opening)" if opening_price
     'Unavailable'
   end
