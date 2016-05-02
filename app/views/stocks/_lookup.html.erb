@@ -15,10 +15,13 @@
     </div>
   <% end %>
   <% if @stock %>
-    <div id="stock-lookup-resultats" class="well results-block">
+    <div id="stock-lookup-results" class="well results-block">
       <strong>Symbol:</strong><%= @stock.ticker %>
       <strong>Name:</strong><%= @stock.name %>
       <strong>Last price:</strong><%= @stock.last_price %>
     </div>
   <% end %>
+  <div id="stock-lookup-errors">
+
+  </div>
 </div>
